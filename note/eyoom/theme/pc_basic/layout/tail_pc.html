@@ -1,0 +1,134 @@
+<?php if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 ?>
+
+<!--{? !_wmode}-->
+				</div><!--//end content-->
+				<!--{? (defined('_INDEX_') && eyoom.use_main_side_layout == 'y') || (!defined('_INDEX_') && eyoom.use_sub_side_layout == 'y')}-->
+				<!--{? eyoom.pos_side_layout == 'right'}-->
+				<div class="side-right">
+					{# side_pc}
+				</div>
+				<!--{/}-->
+				<!--{/}-->
+				<div class="clear"></div>
+			</div><!--//end container-->
+		</div><!--//end eb-body-->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-col">
+					<div class="footer-col-space">
+						<!--{* ----- 하단 로고 영역 시작 ----- *}-->
+						<div class="logo margin-bottom-5">
+							<!--{? 1 // 앞숫자설정 - 이미지:0, 텍스트:1}-->
+							<a href="{C.G5_URL}">{config.cf_title}</a>
+							<!--{:}-->
+							<a class="navbar-brand" href="{C.G5_URL}"><img src="../image/site_logo.png" style="height:26px" alt="{config.cf_title} LOGO"></a>
+							<!--{/}-->
+						</div>
+						<!--{* ----- 하단 로고 영역 끝 ----- *}-->
+
+						<!--{* ----- 사이트소개 영역 시작 ----- *}-->
+						<div class="eb-con-box margin-bottom-15">
+							<p><span class="font-size-12">사이트 소개...<br>하단영역의 수정은 테마 /layout/tail_pc.html에서 수정합니다.</span></p>
+						</div>
+						<!--{* ----- 사이트소개 영역 끝 ----- *}-->
+
+						<!--{* ----- 소셜링크 영역 시작 ----- *}-->
+		            	<div class="eb-social-icon">
+		                    <ul>
+		                        <li class="social-facebook"><a target="_blank" href="#">Facebook</a></li>
+		                        <li class="social-twitter"><a target="_blank" href="#">Twitter</a></li>
+		                        <li class="social-google"><a target="_blank" href="#">Google Plus</a></li>
+		                        <li class="social-tumblr"><a target="_blank" href="#">Tumblr</a></li>
+		                        <li class="social-instagram"><a target="_blank" href="#">Instagram</a></li>
+		                    </ul>
+		            	</div>
+		            	<!--{* ----- 소셜링크 영역 끝 ----- *}-->
+					</div>
+				</div>
+				<div class="footer-col">
+					<div class="footer-col-space">
+	                    <!--{* 방문자 통계 *}-->
+						<!--{? eyoom.use_gnu_visit == 'y'}-->{=visit('basic')}<!--{:}-->{=eb_visit(eyoom.visit_skin)}<!--{/}-->
+					</div>
+				</div>
+				<div class="footer-col">
+					<div class="footer-col-space">
+						<!--{* ----- Information 영역 시작 ----- *}-->
+                        <div class="headline"><h5>Information</h5></div>
+                        <ul class="list-unstyled link-list">
+                            <li>
+                            	<a href="{C.G5_URL}/page/?pid=aboutus">About us</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                            <li>
+                            	<a href="{C.G5_URL}/page/?pid=provision">이용약관</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                            <li>
+                            	<a href="{C.G5_URL}/page/?pid=privacy">개인정보 취급방침</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                            <li>
+                            	<a href="{C.G5_URL}/page/?pid=noemail">이메일 무단수집거부</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                            <li>
+                            	<a href="{C.G5_URL}/page/?pid=contactus">Contact Us</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                            <li>
+                            	<a href="{href}">모바일버전</a><i class="fa fa-angle-right"></i><div class="clear"></div>
+                            </li>
+                        </ul>
+                        <!--{* ----- Information 영역 끝 ----- *}-->
+					</div>
+				</div>
+				<div class="footer-col">
+					<div class="footer-col-space">
+						<!--{* ----- Contact Us 영역 시작 ----- *}-->
+						<div class="headline"><h5>Contact Us</h5></div>
+                        <address>
+                            <p><i class="fa fa-home"></i>{config.cf_title}</p>
+                            <p><i class="fa fa-building"></i>사이트 정보 1</p>
+                            <p><i class="fa fa-phone"></i>사이트 정보 2</p>
+                            <p><i class="fa fa-globe"></i>사이트 정보 3</p>
+                            <p><i class="fa fa-info-circle"></i>사이트 정보 4</p>
+                            <p><i class="fa fa-envelope"></i>Email: <a href="mailto:webmaster@site.name">webmaster@site.name</a></p>
+                        </address>
+                        <!--{* ----- Contact Us 영역 끝 ----- *}-->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="copyright">
+			<div class="container">
+				<p class="t-center">Copyright &copy; {config.cf_title}. All Rights Reserved.</p>
+			</div>
+		</div>
+
+	</div><!--//end wide-layout or boxed-layout-->
+</div><!--//end wrapper-->
+<!--{/}-->
+
+<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/back-to-top.js"></script>
+<script type="text/javascript" src="../plugins/sky-forms/version-2.0.5/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../plugins/sky-forms/version-2.0.5/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../plugins/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="../plugins/counter/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="../plugins/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../js/jquery.bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="../js/jquery.sticky.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        App.init();
+        App.initCounter();
+        App.initNavfix();
+        App.initTooltip();
+    });
+</script>
+<!--[if lt IE 9]>
+	<script src="../js/respond.js"></script>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../plugins/sky-forms/version-2.0.5/js/sky-forms-ie8.js"></script>
+<![endif]-->
+<!--{# tail_sub}-->

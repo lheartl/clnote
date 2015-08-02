@@ -1,0 +1,37 @@
+<?php if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 ?>
+
+<div class="margin-bottom-20">
+	<!--{? eyoom.use_gnu_outlogin == 'y'}-->{=outlogin('basic')}<!--{:}-->{=eb_outlogin(eyoom.outlogin_skin)}<!--{/}-->
+</div>
+<!--{? !defined('_INDEX_')}-->
+<div class="headline"><h5>Side Menu</h5></div>
+<div class="margin-bottom-20">
+	<ul class="list-group sidebar-nav" id="sidebar-nav">
+		<!--{@ sidemenu}-->
+	    <li class="list-group-item list-toggle {? .active}active{/}">
+			<a {? sidemenu.submenu}data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-{.key_}"{:}href="{.me_link}" target="_{.me_target}"{/}><!--{.me_name}--></a>
+	        <ul id="collapse-{.key_}" class="collapse {? .active}in{/}">
+				<!--{@ submenu}-->
+	            <li class="{? ..active}active{/}">{? ..new}<span class="badge badge-e badge-red">new</span>{/}<a href="{..me_link}" target="_{..me_target}">{? ..active}<i class="fa fa-chevron-circle-right"></i>{:}<i class="fa fa-circle"></i>{/} <!--{..me_name}--></a></li>
+				<!--{/}-->
+	        </ul>
+	    </li>
+		<!--{/}-->
+	</ul>
+</div>
+<!--{/}-->
+<div class="margin-bottom-20">
+	{latest->latest_newpost('ebp_np_basic','count=6||cut_subject=17||cut_content=20')}
+</div>
+<div class="margin-bottom-20">
+	<!--{* 투표 *}-->
+	<!--{? eyoom.use_gnu_poll == 'y'}-->{=poll('basic')}<!--{:}-->{=eb_poll(eyoom.poll_skin)}<!--{/}-->
+</div>
+<div class="margin-bottom-20">
+	<!--{* 랭킹 *}-->
+	{latest->latest_rankset('basic','10')}
+</div>
+<div>
+	<!--{* 인기검색어 *}-->
+	<!--{? eyoom.use_gnu_popular == 'y'}-->{=popular('basic')}<!--{:}-->{=eb_popular(eyoom.popular_skin)}<!--{/}-->
+</div>

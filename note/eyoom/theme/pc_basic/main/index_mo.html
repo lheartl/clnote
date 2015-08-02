@@ -1,0 +1,35 @@
+<?php if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 ?>
+
+<!--{* -----------------------------------------------------
+	최신글 추출옵션에서 title=게시판명, bo_table=게시파id 를 설정합니다.
+------------------------------------------------------ *}-->
+<div class="stdiv board-footer margin-bottom-20"  >
+	<div class="center" style="text-align: center;">
+	      <button class="eb-button eb-button-large eb-button-red"  style="text-align: center;width:200px;" name="btn_submit" value="문제풀기" onclick="moveQ();">문제풀기 시작</button>
+	</div>
+</div>
+<!--{* ----- ebm_image_slider 최신글 영역 시작 ----- *}-->
+<div class="margin-bottom-20" >
+	{latest->latest_eyoom('ebm_image_slider','bo_table=freeimg||count=6||cut_subject=20||img_view=y||bo_direct=n||img_width=400')}
+</div>
+<!--{* ----- ebm_image_slider 최신글 영역 끝 ----- *}-->
+
+<!--{* ----- ebm_np_basic 새글 새댓글 최신글 영역 시작 ----- *}-->
+<!-- <div class="eb-con-box margin-bottom-20">
+	{latest->latest_newpost('ebm_np_basic','count=6||cut_subject=23||cut_content=23')}
+</div> -->
+<!--{* ----- ebm_np_basic 새글 새댓글 최신글 영역 끝 ----- *}-->
+
+<!--{* ----- ebm_basic 최신글 영역 시작 ----- *}-->
+<div class="eb-con-box margin-bottom-20">
+	{latest->latest_eyoom('ebm_basic','title=사는얘기||bo_table=free||count=6||cut_subject=25')}
+</div>
+
+<!--{* ----- ebm_basic 최신글 영역 끝 ----- *}-->
+
+<script>
+function moveQ(){
+	var url = "http://clnotes.com/bbs/board.php?bo_ta0.ble=hbq";    
+	$(location).attr('href',url);
+}
+</script>
